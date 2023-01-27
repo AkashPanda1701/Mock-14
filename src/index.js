@@ -97,7 +97,7 @@ app.post('/verify', async (req, res) => {
                 $inc : {score : -randomWord.length}
             }, {new : true});
 
-            return res.status(400).send({
+            return res.status(200).send({
                 message : 'Wrong word',
                 score : user.score
             });
